@@ -1,0 +1,518 @@
+{
+    "results": [{
+            "address_components": [{
+                    "long_name": "4HCP+7VP",
+                    "short_name": "4HCP+7VP",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Playa",
+                    "short_name": "Playa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "4HCP+7VP, Havana, Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 23.1205908,
+                    "west": -82.4129902,
+                    "north": 23.1208468,
+                    "east": -82.4127512
+                },
+                "location": {
+                    "lat": 23.1207286,
+                    "lng": -82.4128458
+                },
+                "location_type": "ROOFTOP",
+                "viewport": {
+                    "south": 23.1193698197085,
+                    "west": -82.41421968029151,
+                    "north": 23.1220677802915,
+                    "east": -82.41152171970849
+                }
+            },
+            "place_id": "ChIJyZ254Th3zYgRXYFwNUbWQVY",
+            "types": [
+                "premise"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "4HCP+CR4",
+                    "short_name": "4HCP+CR4",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Playa",
+                    "short_name": "Playa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "4HCP+CR4, Havana, Cuba",
+            "geometry": {
+                "location": {
+                    "lat": 23.1210101,
+                    "lng": -82.4129305
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "south": 23.1196611197085,
+                    "west": -82.4142794802915,
+                    "north": 23.1223590802915,
+                    "east": -82.41158151970849
+                }
+            },
+            "place_id": "ChIJUwUSIDl3zYgRpL9-CAg_V5w",
+            "types": [
+                "establishment",
+                "health",
+                "hospital",
+                "point_of_interest"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "4HCP+8P",
+                    "short_name": "4HCP+8P",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "4HCP+8P Havana, Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 23.12075,
+                    "west": -82.41324999999999,
+                    "north": 23.120875,
+                    "east": -82.413125
+                },
+                "location": {
+                    "lat": 23.1207841,
+                    "lng": -82.41321529999999
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "south": 23.1194635197085,
+                    "west": -82.41453648029149,
+                    "north": 23.1221614802915,
+                    "east": -82.41183851970848
+                }
+            },
+            "place_id": "GhIJdWDvtOseN0ARPO2VHnKaVMA",
+            "plus_code": {
+                "compound_code": "4HCP+8P Havana, Cuba",
+                "global_code": "76MV4HCP+8P"
+            },
+            "types": [
+                "plus_code"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "Avenue 43",
+                    "short_name": "Avenue 43",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "La Habana",
+                    "short_name": "La Habana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Playa",
+                    "short_name": "Playa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "La Habana",
+                    "short_name": "La Habana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Avenue 43, La Habana, Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 23.119786,
+                    "west": -82.4134179,
+                    "north": 23.121952,
+                    "east": -82.4133857
+                },
+                "location": {
+                    "lat": 23.120869,
+                    "lng": -82.4134018
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "south": 23.1195200197085,
+                    "west": -82.41475078029151,
+                    "north": 23.1222179802915,
+                    "east": -82.4120528197085
+                }
+            },
+            "place_id": "ChIJSZPqGDl3zYgRtsy-JKTZumo",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "1402",
+                    "short_name": "1402",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Calle 18",
+                    "short_name": "Calle 18",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "La Habana",
+                    "short_name": "La Habana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Playa",
+                    "short_name": "Playa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "La Habana",
+                    "short_name": "La Habana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "1402 Calle 18, La Habana, Cuba",
+            "geometry": {
+                "location": {
+                    "lat": 23.11979,
+                    "lng": -82.4136729
+                },
+                "location_type": "RANGE_INTERPOLATED",
+                "viewport": {
+                    "south": 23.1184410197085,
+                    "west": -82.4150218802915,
+                    "north": 23.1211389802915,
+                    "east": -82.4123239197085
+                }
+            },
+            "place_id": "Eh4xNDAyIENhbGxlIDE4LCBMYSBIYWJhbmEsIEN1YmEiGxIZChQKEgnNb2YJOXfNiBGjCi3_7QSjXhD6Cg",
+            "types": [
+                "street_address"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "Playa",
+                    "short_name": "Playa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Playa, Havana, Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 23.0472356,
+                    "west": -82.5474929,
+                    "north": 23.1347167,
+                    "east": -82.4055934
+                },
+                "location": {
+                    "lat": 23.0886214,
+                    "lng": -82.4481944
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "south": 23.0472356,
+                    "west": -82.5474929,
+                    "north": 23.1347167,
+                    "east": -82.4055934
+                }
+            },
+            "place_id": "ChIJp_XDYc9zzYgRk0lwLEoM9rc",
+            "types": [
+                "administrative_area_level_2",
+                "political"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Havana, Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 22.937643,
+                    "west": -82.5365219,
+                    "north": 23.188709,
+                    "east": -82.06886999999999
+                },
+                "location": {
+                    "lat": 23.0540698,
+                    "lng": -82.34518899999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "south": 22.937643,
+                    "west": -82.5365219,
+                    "north": 23.188709,
+                    "east": -82.06886999999999
+                }
+            },
+            "place_id": "ChIJbQS2MpOc0ogRMJFrpYnL3IY",
+            "types": [
+                "administrative_area_level_1",
+                "political"
+            ]
+        },
+        {
+            "address_components": [{
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Havana",
+                    "short_name": "Havana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Cuba",
+                    "short_name": "CU",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Havana, Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 22.9200574,
+                    "west": -82.574873,
+                    "north": 23.1813159,
+                    "east": -82.0911311
+                },
+                "location": {
+                    "lat": 23.1135925,
+                    "lng": -82.3665956
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "south": 22.9200574,
+                    "west": -82.574873,
+                    "north": 23.1813159,
+                    "east": -82.0911311
+                }
+            },
+            "place_id": "ChIJ4QD2vUx3zYgRYA13Gn5NKU4",
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "address_components": [{
+                "long_name": "Cuba",
+                "short_name": "CU",
+                "types": [
+                    "country",
+                    "political"
+                ]
+            }],
+            "formatted_address": "Cuba",
+            "geometry": {
+                "bounds": {
+                    "south": 19.6529001,
+                    "west": -85.1715001,
+                    "north": 23.3776001,
+                    "east": -73.9545
+                },
+                "location": {
+                    "lat": 21.521757,
+                    "lng": -77.781167
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "south": 19.6529001,
+                    "west": -85.1715001,
+                    "north": 23.3776001,
+                    "east": -73.9545
+                }
+            },
+            "place_id": "ChIJtUx6DwdJzYgRGqQQkVL3jHk",
+            "types": [
+                "country",
+                "political"
+            ]
+        }
+    ]
+}

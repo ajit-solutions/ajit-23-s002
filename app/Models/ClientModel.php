@@ -1,0 +1,24 @@
+<?php namespace App\Models;
+  
+  use CodeIgniter\Model;
+    
+  class ClientModel extends Model
+  {
+      protected $table = 'clients';
+      protected $primaryKey = 'client_id';
+      protected $allowedFields = [
+        'client_name', 
+        'client_address', 
+        'client_location'
+      ];
+      protected $returnType    = \App\Entities\Client::class;
+   
+      public function getAll()
+      {
+        return $this
+          ->asObject()
+          ->orderBy('client_name')
+          ->findAll();
+      }
+  
+  }
