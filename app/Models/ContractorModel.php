@@ -30,8 +30,8 @@ class ContractorModel extends Model
     'driver_name' => 'required|max_length[50]',
     'driver_surname' => 'required|max_length[100]',
     'driver_id_card' => 'required|is_unique[drivers.driver_id_card,driver_id_card,{driver_id_card}]|regex_match[/^[0-9]{3}-[0-9]{7}-[0-9]{1}$/]',
-    'driver_photo' => 'max_length[255]',
-    'driver_driving_license_photo' => 'max_length[255]',
+    // 'driver_photo' => 'max_length[255]',
+    // 'driver_driving_license_photo' => 'max_length[255]',
     /* verificar si el today se lo traga ahí, el tema es que la fecha debe ser mayor que hoy 
     y los días definidos en seccion de configuracion, tratar eso */
     // 'driver_driving_license_expiration_date' => 'required|valid_date|greater_than[today]', 
