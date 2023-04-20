@@ -33,7 +33,8 @@
 
      public function create()
      {
-         $license_upload_response = (object) $this->uploadImage('driver_driving_license_photo', 'drivers');
+        $license_upload_response = (object) $this->uploadImage('driver_driving_license_photo', 'drivers');
+        $photo_upload_response = (object) $this->uploadImage('driver_photo', 'drivers');
  
  
          foreach ($this->model->allowedFields as $col) {

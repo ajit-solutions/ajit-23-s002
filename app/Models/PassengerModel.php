@@ -31,9 +31,9 @@ class PassengerModel extends Model
     'passenger_name' => 'required|max_length[50]',
     'passenger_surname' => 'required|max_length[100]',
     'passenger_address' => 'required|max_length[255]',
-    'passenger_id_card' => 'required|regex_match[/^[0-9]{3}-[0-9]{7}-[0-9]{1}$/]|is_unique[passengers.passenger_id_card,passenger_id_card,{passenger_id_card}]',
+    'passenger_id_card' => 'required|regex_match[/^[0-9]{3}-[0-9]{7}-[0-9]{1}$/]|is_unique[passengers.passenger_id_card,passenger_id,{passenger_id}]',
     'passenger_type_id' => 'required',
-    'passenger_number' => 'max_length[6]',
+    'passenger_number' => 'required|is_natural_no_zero|less_than[999999]',
     'passenger_location' => 'required|max_length[255]',
     'client_id' => 'required|integer',
     'office_id' => 'required|integer',
@@ -63,7 +63,8 @@ class PassengerModel extends Model
     ],
     'passenger_number' => [
       'required' => 'El número de pasajero es obligatorio.',
-      'max_length' => 'El número de pasajero no puede tener más de 6 caracteres.'
+      'is_natural_no_zero' => 'El número de pasajero tiene que ser mayor que cero.',
+      'less_than' => 'El número de pasajero no puede tener más de 6 dígitos.'
     ],
     'passenger_location' => [
       'required' => 'La ubicación del pasajero es obligatoria.',
