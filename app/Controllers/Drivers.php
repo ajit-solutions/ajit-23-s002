@@ -45,6 +45,9 @@
          if (!$license_upload_response->error && $license_upload_response->file)
              $data['driver_driving_license_photo'] = !$license_upload_response->error ? $license_upload_response->file : null;
  
+         if (!$photo_upload_response->error && $photo_upload_response->file)
+             $data['driver_photo'] = !$photo_upload_response->error ? $photo_upload_response->file : null;
+
          $this->model->insert($data);
  
          $errors = $this->model->errors();
@@ -70,19 +73,19 @@
  
      public function update($id = null)
      {
-        $license_upload_response = (object) $this->uploadImage('driver_driving_license_photo', 'drivers');
-        $photo_upload_response = (object) $this->uploadImage('driver_photo', 'drivers');
+        $license_upload_response = (object) $this->uploadImage('driver_driving_license_photo', 'drivers', $id);
+        $photo_upload_response = (object) $this->uploadImage('driver_photo', 'drivers', $id);
  
          foreach ($this->model->allowedFields as $col) {
             if(!in_array($col, array('driver_driving_license_photo', 'driver_photo')))
                 $data[$col] = $this->request->getVar($col);
          }
  
-         if (!$license_upload_response->error && $license_upload_response->file){
+         if (!$license_upload_response->error && ($license_upload_response->file || $license_upload_response->action === 'delete')){
              $data['driver_driving_license_photo'] = !$license_upload_response->error ? $license_upload_response->file : null;
         }
 
-         if (!$photo_upload_response->error && $photo_upload_response->file){
+         if (!$photo_upload_response->error && ($photo_upload_response->file || $photo_upload_response->action === 'delete')){
              $data['driver_photo'] = !$photo_upload_response->error ? $photo_upload_response->file : null;
         }
 

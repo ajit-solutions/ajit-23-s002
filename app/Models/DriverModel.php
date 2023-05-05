@@ -23,9 +23,9 @@ class DriverModel extends Model
   protected $returnType    = \App\Entities\Driver::class;
 
   protected $validationRules =  [
-    'driver_name' => 'required|max_length[50]',
-    'driver_surname' => 'required|max_length[100]',
-    'driver_id_card' => 'required|is_unique[drivers.driver_id_card,driver_id_card,{driver_id_card}]|regex_match[/^[0-9]{3}-[0-9]{7}-[0-9]{1}$/]',
+    'driver_name' => 'required|max_length[50]|alpha_space',
+    'driver_surname' => 'required|max_length[100]|alpha_space',
+    'driver_id_card' => 'required|is_unique[drivers.driver_id_card,driver_id_card,{driver_id}]|regex_match[/^[0-9]{3}-[0-9]{7}-[0-9]{1}$/]',
     'driver_photo' => 'max_length[255]',
     'driver_driving_license_photo' => 'max_length[255]',
     /* verificar si el today se lo traga ahí, el tema es que la fecha debe ser mayor que hoy 
@@ -40,11 +40,13 @@ class DriverModel extends Model
   protected $validationMessages = [
     'driver_name' => [
       'required' => 'El nombre del chofer no puede estar vacío.',
-	  'max_length' => 'El nombre del chofer no debe exceder los 50 caracteres.',
+      'max_length' => 'El nombre del chofer no debe exceder los 50 caracteres.',
+      'alpha_space' => 'El nombre del chofer solo acepta letras y espacios.',
     ],
     'driver_surname' => [
       'required' => 'El apellido del chofer no puede estar vacío.',
-	  'max_length' => 'El nombre del chofer no debe exceder los 100 caracteres.',
+	    'max_length' => 'El apellido del chofer no debe exceder los 100 caracteres.',
+      'alpha_space' => 'El apellido del chofer solo acepta letras y espacios.',
     ],
     'driver_id_card' => [
       'required' => 'El número de identificación del chofer no puede estar vacío.',
@@ -80,7 +82,7 @@ class DriverModel extends Model
   {
     return $this
       ->asObject()
-      // ->where('is_contractor', 'No')
+      ->where('is_contractor', 'No')
       ->orderBy('driver_name', 'driver_surname')
       ->findAll();
   }

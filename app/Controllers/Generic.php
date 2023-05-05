@@ -160,14 +160,33 @@ class Generic extends ResourceController
     }
 
     //file upload
-    public function uploadImage($field, $table)
+    public function uploadImage($field, $table, $id = null)
     {
         helper('text');
 
+        $UPLOAD_DIR = FCPATH . 'uploads\\' . $table . '\\';
+
         $response = [
             'error' => false,
-            'file' => null
+            'file' => null,
+            'action' => null
         ];
+
+        if($this->request->getVar($field) === '*delete*'){
+            $row = $this->model->asObject()->find($id);
+
+            if(!empty($row->$field)){
+                $filename = $UPLOAD_DIR . $row->$field;
+                unlink(realpath($filename));
+            }
+
+            $response = [
+                'error' => false,
+                'file' => null,
+                'action' => 'delete'
+            ];
+            return $response;
+        }
 
         if (empty($_FILES[$field]))
             return $response;
@@ -176,11 +195,12 @@ class Generic extends ResourceController
 
         $filename = random_string('alnum', 16) . '.' . $extension;
 
-        $targetPath = FCPATH . 'uploads\\' . $table . '\\' . $filename;
+        $targetPath = $UPLOAD_DIR . $filename;
 
         $response = [
             'error' => false,
             'file' => $filename,
+            'action' => null
         ];
 
         try {

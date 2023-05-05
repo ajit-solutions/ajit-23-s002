@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 use App\Models\ClientModel;
 use App\Models\OfficeModel;
 use App\Models\RouteModel;
+use App\Models\PassengerTypeModel;
 
 class PassengerModel extends Model
 {
@@ -42,33 +43,33 @@ class PassengerModel extends Model
   
   protected $validationMessages = [
     'passenger_name' => [
-      'required' => 'El nombre del pasajero es obligatorio.',
-      'max_length' => 'El nombre del pasajero no puede tener más de 50 caracteres.'
+      'required' => 'El nombre del empleado es obligatorio.',
+      'max_length' => 'El nombre del empleado no puede tener más de 50 caracteres.'
     ],
     'passenger_surname' => [
-      'max_length' => 'El apellido del pasajero no puede tener más de 100 caracteres.'
+      'max_length' => 'El apellido del empleado no puede tener más de 100 caracteres.'
     ],
     'passenger_address' => [
-      'required' => 'La dirección del pasajero es obligatoria.',
-      'max_length' => 'La dirección del pasajero no puede tener más de 255 caracteres.'
+      'required' => 'La dirección del empleado es obligatoria.',
+      'max_length' => 'La dirección del empleado no puede tener más de 255 caracteres.'
     ],
     'passenger_id_card' => [
-      'required' => 'El número de identificación del pasajero es obligatorio.',
-      'regex_match' => 'El número de identificación del pasajero debe tener el formato 123-1234567-1.',
-      'is_unique' => 'El número de identificación del pasajero ya existe en la base de datos.'
+      'required' => 'El número de identificación del empleado es obligatorio.',
+      'regex_match' => 'El número de identificación del empleado debe tener el formato 123-1234567-1.',
+      'is_unique' => 'El número de identificación del empleado ya existe en la base de datos.'
     ],
     'passenger_type_id' => [
-      'required' => 'El tipo de pasajero es obligatorio.',
-      'in_list' => 'La opción seleccionada para el tipo de pasajero no es válida.'
+      'required' => 'El tipo de empleado es obligatorio.',
+      'in_list' => 'La opción seleccionada para el tipo de empleado no es válida.'
     ],
     'passenger_number' => [
-      'required' => 'El número de pasajero es obligatorio.',
-      'is_natural_no_zero' => 'El número de pasajero tiene que ser mayor que cero.',
-      'less_than' => 'El número de pasajero no puede tener más de 6 dígitos.'
+      'required' => 'El número de empleado es obligatorio.',
+      'is_natural_no_zero' => 'El número de empleado tiene que ser mayor que cero.',
+      'less_than' => 'El número de empleado no puede tener más de 6 dígitos.'
     ],
     'passenger_location' => [
-      'required' => 'La ubicación del pasajero es obligatoria.',
-      'max_length' => 'La ubicación del pasajero no puede tener más de 255 caracteres.'
+      'required' => 'La ubicación del empleado es obligatoria.',
+      'max_length' => 'La ubicación del empleado no puede tener más de 255 caracteres.'
     ],
     'client_id' => [
       'required' => 'El ID del cliente es obligatorio.',
@@ -84,25 +85,35 @@ class PassengerModel extends Model
     ]
   ];
 
-  public function getAll()
+  public function getAll($cond = null)
   {
     $clientModel = new ClientModel();
     $officeModel = new OfficeModel();
     $routeModel = new RouteModel();
+    $passengerTypeModel = new PassengerTypeModel();
 
-    $items = $this
-      ->asObject()
-      ->orderBy('passenger_name', 'passenger_surname',)
-      ->findAll();
+    if($cond)
+      $items = $this
+        ->asObject()
+        ->where($cond)
+        ->orderBy('passenger_name', 'passenger_surname',)
+        ->findAll();
+    else 
+      $items = $this
+        ->asObject()
+        ->orderBy('passenger_name', 'passenger_surname',)
+        ->findAll();
 
     foreach ($items as &$item) {
       $client = $clientModel->find($item->client_id);
       $office = $officeModel->find($item->office_id);
       $route = $routeModel->find($item->route_id);
+      $passengerType = $passengerTypeModel->find($item->passenger_type_id);
 
       $item->client_name = $client ? $client->client_name : '';
       $item->office_name = $office ? $office->office_name : '';
       $item->route_name = $route ? $route->route_name : '';
+      $item->passenger_type_name = $passengerType ? $passengerType->passenger_type_name : '';
     }
     return $items;
   }

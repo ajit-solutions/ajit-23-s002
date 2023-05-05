@@ -78,6 +78,7 @@ class VehicleModel extends Model
 
     $items = $this
       ->asObject()
+      ->where('contractor_id')
       ->orderBy('vehicle_id')
       ->findAll();
 
