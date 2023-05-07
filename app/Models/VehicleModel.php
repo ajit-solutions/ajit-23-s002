@@ -102,9 +102,6 @@ class VehicleModel extends Model
     $driverModel = new DriverModel();
 
     $item = $this->find($id);
-    // if($id === '69')
-    // var_dump($item);
-
 
     if (!empty($item)) {
       $brand = $brandModel->find($item->brand_id);

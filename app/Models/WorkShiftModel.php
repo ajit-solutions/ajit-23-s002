@@ -68,8 +68,6 @@ class WorkShiftModel extends Model
         ->where("passenger_id IN ($work_shift_passengers)")
         ->findAll();
 
-      // var_dump($this->db->lastQuery);
-
       $item->work_shift_passengers = $passengers;
     }
     return $items;

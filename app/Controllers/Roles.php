@@ -127,8 +127,7 @@
 
         $rolePermissionModel->where('role_id', $id)->delete();
 
-        echo $rolePermissionModel->db->getLastQuery();
- 
+
          if (!empty($permissions)){
              foreach ($permissions as $index => $permission_id) {
                  $data = array(

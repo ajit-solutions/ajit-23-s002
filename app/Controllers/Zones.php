@@ -64,8 +64,6 @@ class Zones extends Generic
                 ->where("client_id IN ($zoneClients )")
                 ->findAll();
 
-            // var_dump($clients);
-
             $item->exclusion_zone_clients = $clients;
         }
 
