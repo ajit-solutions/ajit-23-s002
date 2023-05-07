@@ -164,7 +164,8 @@ class Generic extends ResourceController
     {
         helper('text');
 
-        $UPLOAD_DIR = FCPATH . 'uploads\\' . $table . '\\';
+        // $UPLOAD_DIR = FCPATH . 'uploads\\' . $table . '\\';
+        $UPLOAD_DIR = "../public/uploads/$table/";
 
         $response = [
             'error' => false,
